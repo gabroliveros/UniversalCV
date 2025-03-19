@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CVjson Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/cvs.js') }}" defer></script>
+</head>
+<body>
+    <h1>CVjson Generator</h1>
+    
+    <!-- previous JSON -->
+    <div class="section">
+        <h4>If you have a previous JSON file, you can load it here:</h4>
+        <button onclick="document.getElementById('jsonFileInput').click()">Load JSON</button>
+        <input type="file" id="jsonFileInput" accept=".json" style="display: none;">
+    </div>    
+
+    <!-- Personal Information -->
+    <div class="section">
+        <h2>Personal Information</h2>
+        <input type="text" id="names" placeholder="Names" required>
+        <input type="text" id="surnames" placeholder="Surnames" required>
+        <div class="input-container">
+            <label for="date_of_birth">Date of Birth:</label>
+            <input type="date" id="date_of_birth" required>
+        </div>
+        <div id="nationalities_container">
+            <div class="nationality-entry">
+                <select class="nationality" required>
+                    <option value="" disabled selected>Select Nationality</option>
+                    <option value="AR">Argentina (AR)</option>
+                    <option value="AU">Australia (AU)</option>
+                    <option value="BR">Brazil (BR)</option>
+                    <option value="CA">Canada (CA)</option>
+                    <option value="CN">China (CN)</option>
+                    <option value="CO">Colombia (CO)</option>
+                    <option value="DE">Germany (DE)</option>
+                    <option value="ES">Spain (ES)</option>
+                    <option value="FR">France (FR)</option>
+                    <option value="GB">United Kingdom (GB)</option>
+                    <option value="IN">India (IN)</option>
+                    <option value="IT">Italy (IT)</option>
+                    <option value="JP">Japan (JP)</option>
+                    <option value="MX">Mexico (MX)</option>
+                    <option value="US">United States (US)</option>
+                    <option value="VE">Venezuela (VE)</option>
+                </select>
+                <button type="button" onclick="removeNationality(this)">-</button>
+            </div>
+        </div>
+        <button type="button" onclick="addNationality()">+ Add Nationality</button>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+        <input type="text" id="street" placeholder="Street" required>
+        <input type="text" id="city" placeholder="City" required>
+        <input type="text" id="country" placeholder="Country (ISO 3166-1 alpha-2)" required>
+        <input type="text" id="postal_code" placeholder="Postal Code" required>
+        <div id="online_profiles"></div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <button type="button" onclick="addOnlineProfile()">+ Add Profile</button>
+            <span style="font-size: 14px; color: #333; margin-top: 9px;">Add social network, portfolio or dashboard like LinkedIn, Indeed, GitHub, Trello or anymore.</span>
+        </div>
+    </div>
+
+    <!-- Education -->
+    <div class="section" id="education_section">
+        <h2>Education <button type="button" onclick="addEducation()">+</button></h2>
+        <div class="dynamic-section" id="education_fields"></div>
+    </div>
+
+    <!-- Employment History -->
+    <div class="section" id="employment_section">
+        <h2>Employment History <button type="button" onclick="addEmployment()">+</button></h2>
+        <div class="dynamic-section" id="employment_fields"></div>
+    </div>
+
+    <!-- Skills -->
+    <div class="section" id="skills_section">
+        <h2>Skills</h2>
+        <div id="technical_skills"></div>
+        <button type="button" onclick="addTechnicalSkill()">+ Add Technical Skill</button>
+        <div id="languages"></div>
+        <button type="button" onclick="addLanguage()">+ Add Language</button>
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="font-size: 14px; color: #333; margin-top: 9px;">Add all your soft skills separated with comma: </span>
+            <input type="text" id="soft_skills" placeholder="Soft Skills (comma-separated)">
+        </div>       
+    </div>
+
+    <!-- Certifications -->
+    <div class="section" id="certifications_section">
+        <h2>Certifications <button type="button" onclick="addCertification()">+</button></h2>
+        <div class="dynamic-section" id="certification_fields"></div>
+    </div>
+
+    <!-- Events Participation -->
+    <div class="section" id="events_section">
+        <h2>Events Participation <button type="button" onclick="addEvent()">+</button></h2>
+        <div class="dynamic-section" id="event_fields"></div>
+    </div>
+
+    <!-- Publications and Research -->
+    <div class="section" id="publications_section">
+        <h2>Publications and Research <button type="button" onclick="addPublication()">+</button></h2>
+        <div class="dynamic-section" id="publication_fields"></div>
+    </div>
+
+    <!-- References -->
+    <div class="section" id="references_section">
+        <h2>References <button type="button" onclick="addReference()">+</button></h2>
+        <div class="dynamic-section" id="reference_fields"></div>
+    </div>
+
+    <!-- Additional Sections -->
+    <div class="section" id="additional_sections">
+        <h2>Additional Sections</h2>
+        <div id="awards"></div>
+        <button type="button" onclick="addAward()">+ Add Award/Honor</button>
+        <div id="volunteering"></div>
+        <button type="button" onclick="addVolunteering()">+ Add Volunteering</button>
+        <div id="affiliations"></div>
+        <button type="button" onclick="addAffiliation()">+ Add Professional Affiliation</button>
+    </div>
+
+    <!-- Generate JSON Button -->
+    <div style="gap: 10px; margin-top: 10px;">
+        <button onclick="generateCV()">Preview JSON</button>
+        <a id="downloadLink" style="text-decoration: none;">
+            <button id="downloadButton" disabled style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; font-size: 14px;">Download JSON</button>
+        </a>
+    </div>
+    <pre id="output"></pre>
+    
+</body>
+</html>

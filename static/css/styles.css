@@ -1,0 +1,419 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #4CAF50;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+h4 {
+    color: #000000; /* Color negro */
+    font-weight: normal; /* Sin negrita */
+    margin-bottom: 15px; /* Margen inferior */
+    font-size: 16px; /* Tamaño de fuente base (ajustable) */
+}
+
+.section {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dynamic-section {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background-color: #fafafa;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+    margin: 10px 5px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.input-container label {
+    font-size: 14px;
+    color: #333;
+}
+
+#nationalities_container .nationality-entry {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+#nationalities_container .nationality-entry input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#nationalities_container .nationality-entry button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#nationalities_container .nationality-entry button:hover {
+    background-color: #cc0000;
+}
+
+.nationality-entry {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.nationality-entry select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 200px;
+}
+
+.nationality-entry button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.nationality-entry button:hover {
+    background-color: #cc0000;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Dynamic Sections */
+.dynamic-section input,
+.dynamic-section textarea {
+    margin-bottom: 10px;
+}
+
+.dynamic-section button {
+    margin-top: 5px;
+    background-color: #ff4d4d;
+}
+
+.dynamic-section button:hover {
+    background-color: #cc0000;
+}
+
+/* Online Profiles Section */
+#online_profiles div {
+    display: flex; /* Muestra los elementos en línea */
+    align-items: center; /* Alinea verticalmente los elementos */
+    gap: 10px; /* Espacio entre los elementos */
+    margin-bottom: 10px; /* Margen inferior para separar los bloques */
+}
+
+#online_profiles input {
+    flex: 1; /* Hace que los campos de entrada ocupen el espacio disponible */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#online_profiles button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#online_profiles button:hover {
+    background-color: #cc0000;
+}
+
+/* Education Section */
+.education-entry {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background-color: #fafafa;
+}
+
+.education-entry select,
+.education-entry textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.education-entry textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.education-entry .date-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0;
+}
+
+.date-container label {
+    font-size: 14px;
+    color: #333;
+}
+
+.education-entry label {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espacio entre el checkbox y el texto */
+    margin: 8px 0; /* Mantén el margen consistente con otros elementos */
+    font-size: 14px;
+    color: #333;
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    justify-content: flex-start; /* Alinea todo a la izquierda */
+}
+
+.education-entry input[type="checkbox"] {
+    margin: 0;
+    width: auto;
+}
+
+.education-entry button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.education-entry button:hover {
+    background-color: #cc0000;
+}
+
+/* Employment Section */
+#employment_fields div {
+    margin-bottom: 15px;
+}
+
+select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+/* Skills Section */
+#technical_skills div,
+#languages div {
+    margin-bottom: 10px;
+}
+
+.skill-select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+    background-color: white;
+    color: #333;
+}
+
+.remove-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.remove-button:hover {
+    background-color: #cc0000;
+}
+
+#language_certifications div {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background-color: #fafafa;
+}
+
+.language-select,
+.proficiency-select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+    background-color: white;
+    color: #333;
+}
+
+/* Certifications Section */
+#certification_fields div {
+    margin-bottom: 10px;
+}
+
+/* Events Section */
+#event_fields select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+    background-color: white;
+    color: #333;
+}
+
+#event_fields input,
+#event_fields textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+#event_fields textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Publications Section */
+#publication_fields div {
+    margin-bottom: 10px;
+}
+
+/* References Section */
+#reference_fields div {
+    margin-bottom: 10px;
+}
+
+/* Awards Section */
+#awards div {
+    margin-bottom: 10px;
+}
+
+/* Volunteering Section */
+#volunteering div {
+    margin-bottom: 10px;
+}
+
+/* Affiliations Section */
+#affiliations div {
+    margin-bottom: 10px;
+}
+
+/* JSON Preview and Download */
+#output {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 14px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin-top: 20px;
+}
+
+#downloadLink {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#downloadLink:hover {
+    background-color: #45a049;
+}
