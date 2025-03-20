@@ -28,9 +28,9 @@ function prefillForm(data) {
 
     // Nationalities
     const nationalitiesContainer = document.getElementById('nationalities_container');
-    nationalitiesContainer.innerHTML = ''; // Clear existing nationalities
+    nationalitiesContainer.innerHTML = ''; 
     data.personal_information.nationalities.forEach(nationality => {
-        addNationality(); // Add a new nationality field
+        addNationality(); 
         const lastNationality = nationalitiesContainer.lastElementChild;
         const nationalityInput = lastNationality.querySelector('input[type="text"]');
         if (nationalityInput) {
@@ -40,9 +40,9 @@ function prefillForm(data) {
 
     // Online Profiles
     const onlineProfilesContainer = document.getElementById('online_profiles');
-    onlineProfilesContainer.innerHTML = ''; // Clear existing profiles
+    onlineProfilesContainer.innerHTML = ''; 
     data.personal_information.online_profiles.forEach(profile => {
-        addOnlineProfile(); // Add a new profile field
+        addOnlineProfile(); 
         const lastProfile = onlineProfilesContainer.lastElementChild;
         const platformInput = lastProfile.querySelector('input[type="text"]');
         const urlInput = lastProfile.querySelector('input[type="url"]');
@@ -54,9 +54,9 @@ function prefillForm(data) {
 
     // Education
     const educationContainer = document.getElementById('education_fields');
-    educationContainer.innerHTML = ''; // Clear existing education entries
+    educationContainer.innerHTML = ''; 
     data.education.forEach(edu => {
-        addEducation(); // Add a new education field
+        addEducation(); 
         const lastEducation = educationContainer.lastElementChild;
         const titleInput = lastEducation.querySelector('input[type="text"]');
         const institutionInput = lastEducation.querySelectorAll('input[type="text"]')[1];
@@ -86,9 +86,9 @@ function prefillForm(data) {
 
     // Employment History
     const employmentContainer = document.getElementById('employment_fields');
-    employmentContainer.innerHTML = ''; // Clear existing employment entries
+    employmentContainer.innerHTML = '';
     data.employment_history.forEach(emp => {
-        addEmployment(); // Add a new employment field
+        addEmployment();
         const lastEmployment = employmentContainer.lastElementChild;
         const positionInput = lastEmployment.querySelector('input[type="text"]');
         const organizationInput = lastEmployment.querySelectorAll('input[type="text"]')[1];
@@ -115,9 +115,9 @@ function prefillForm(data) {
 
     // Technical Skills
     const technicalSkillsContainer = document.getElementById('technical_skills');
-    technicalSkillsContainer.innerHTML = ''; // Clear existing technical skills
+    technicalSkillsContainer.innerHTML = ''; 
     data.skills.technical.forEach(skill => {
-        addTechnicalSkill(); // Add a new technical skill field
+        addTechnicalSkill(); 
         const lastSkill = technicalSkillsContainer.lastElementChild;
         const nameInput = lastSkill.querySelector('input[type="text"]');
         const proficiencySelect = lastSkill.querySelector('select');
@@ -130,9 +130,9 @@ function prefillForm(data) {
 
     // Languages
     const languagesContainer = document.getElementById('languages');
-    languagesContainer.innerHTML = ''; // Clear existing languages
+    languagesContainer.innerHTML = '';
     data.skills.languages.forEach(lang => {
-        addLanguage(); // Add a new language field
+        addLanguage(); 
         const lastLanguage = languagesContainer.lastElementChild;
         const languageSelect = lastLanguage.querySelector('select');
         const readingSelect = lastLanguage.querySelectorAll('select')[1];
@@ -147,9 +147,9 @@ function prefillForm(data) {
         // Language Certifications
         const certificationsContainer = lastLanguage.querySelector('#language_certifications');
         if (certificationsContainer) {
-            certificationsContainer.innerHTML = ''; // Clear existing certifications
+            certificationsContainer.innerHTML = ''; 
             lang.certifications.forEach(cert => {
-                addLanguageCertification(lastLanguage.querySelector('button[onclick*="addLanguageCertification"]')); // Add a new certification field
+                addLanguageCertification(lastLanguage.querySelector('button[onclick*="addLanguageCertification"]')); 
                 const lastCert = certificationsContainer.lastElementChild;
                 const nameInput = lastCert.querySelector('input[type="text"]');
                 const scoreInput = lastCert.querySelectorAll('input[type="text"]')[1];
@@ -164,9 +164,9 @@ function prefillForm(data) {
 
     // Certifications
     const certificationsContainer = document.getElementById('certification_fields');
-    certificationsContainer.innerHTML = ''; // Clear existing certifications
+    certificationsContainer.innerHTML = '';
     data.certifications.forEach(cert => {
-        addCertification(); // Add a new certification field
+        addCertification(); 
         const lastCert = certificationsContainer.lastElementChild;
         const nameInput = lastCert.querySelector('input[type="text"]');
         const issuingOrganizationInput = lastCert.querySelectorAll('input[type="text"]')[1];
@@ -185,9 +185,9 @@ function prefillForm(data) {
 
     // Events
     const eventsContainer = document.getElementById('event_fields');
-    eventsContainer.innerHTML = ''; // Clear existing events
+    eventsContainer.innerHTML = '';
     data.events_participation.forEach(event => {
-        addEvent(); // Add a new event field
+        addEvent(); 
         const lastEvent = eventsContainer.lastElementChild;
         const nameInput = lastEvent.querySelector('input[type="text"]');
         const roleSelect = lastEvent.querySelector('select');
@@ -204,9 +204,9 @@ function prefillForm(data) {
 
     // Publications
     const publicationsContainer = document.getElementById('publication_fields');
-    publicationsContainer.innerHTML = ''; // Clear existing publications
+    publicationsContainer.innerHTML = '';
     data.publications_research.forEach(pub => {
-        addPublication(); // Add a new publication field
+        addPublication(); 
         const lastPub = publicationsContainer.lastElementChild;
         const typeInput = lastPub.querySelector('input[type="text"]');
         const titleInput = lastPub.querySelectorAll('input[type="text"]')[1];
@@ -227,9 +227,9 @@ function prefillForm(data) {
 
     // References
     const referencesContainer = document.getElementById('reference_fields');
-    referencesContainer.innerHTML = ''; // Clear existing references
+    referencesContainer.innerHTML = ''; 
     data.references.forEach(ref => {
-        addReference(); // Add a new reference field
+        addReference(); 
         const lastRef = referencesContainer.lastElementChild;
         const nameInput = lastRef.querySelector('input[type="text"]');
         const positionInput = lastRef.querySelectorAll('input[type="text"]')[1];
@@ -248,9 +248,9 @@ function prefillForm(data) {
 
     // Awards
     const awardsContainer = document.getElementById('awards');
-    awardsContainer.innerHTML = ''; // Clear existing awards
+    awardsContainer.innerHTML = ''; 
     data.additional_sections.awards_honors.forEach(award => {
-        addAward(); // Add a new award field
+        addAward(); 
         const lastAward = awardsContainer.lastElementChild;
         const nameInput = lastAward.querySelector('input[type="text"]');
         const issuingOrganizationInput = lastAward.querySelectorAll('input[type="text"]')[1];
@@ -265,9 +265,9 @@ function prefillForm(data) {
 
     // Volunteering
     const volunteeringContainer = document.getElementById('volunteering');
-    volunteeringContainer.innerHTML = ''; // Clear existing volunteering entries
+    volunteeringContainer.innerHTML = ''; 
     data.additional_sections.volunteering.forEach(vol => {
-        addVolunteering(); // Add a new volunteering field
+        addVolunteering(); 
         const lastVol = volunteeringContainer.lastElementChild;
         const roleInput = lastVol.querySelector('input[type="text"]');
         const organizationInput = lastVol.querySelectorAll('input[type="text"]')[1];
@@ -284,9 +284,9 @@ function prefillForm(data) {
 
     // Professional Affiliations
     const affiliationsContainer = document.getElementById('affiliations');
-    affiliationsContainer.innerHTML = ''; // Clear existing affiliations
+    affiliationsContainer.innerHTML = ''; 
     data.additional_sections.professional_affiliations.forEach(aff => {
-        addAffiliation(); // Add a new affiliation field
+        addAffiliation();
         const lastAff = affiliationsContainer.lastElementChild;
         const organizationInput = lastAff.querySelector('input[type="text"]');
         const roleInput = lastAff.querySelectorAll('input[type="text"]')[1];
@@ -682,7 +682,7 @@ async function generateCV() {
         }
     };
 
-    // Validar nacionalidades (ISO 3166-1 alpha-2)
+    // Validate nacionalities (ISO 3166-1 alpha-2)
     const invalidNationalities = data.personal_information.nationalities.filter(
         nationality => !/^[A-Z]{2}$/.test(nationality)
     );
@@ -691,7 +691,7 @@ async function generateCV() {
         return;
     }
 
-    // Recolectar perfiles en línea
+    // Collect online profiles
     document.querySelectorAll('#online_profiles div').forEach(div => {
         const inputs = div.querySelectorAll('input');
         data.personal_information.online_profiles.push({
@@ -700,7 +700,7 @@ async function generateCV() {
         });
     });
 
-    // Recolectar educación
+    // Collect education
     document.querySelectorAll('#education_fields .education-entry').forEach(div => {
         const inputs = div.querySelectorAll('input');
         const select = div.querySelector('select');
@@ -720,7 +720,7 @@ async function generateCV() {
         });
     });
 
-    // Recolectar historial laboral
+    // Collect work experience
     document.querySelectorAll('#employment_fields div').forEach(div => {
         const inputs = div.querySelectorAll('input');
         const textarea = div.querySelector('textarea');
@@ -739,7 +739,7 @@ async function generateCV() {
         });
     });
 
-    // Recolectar habilidades técnicas
+    // Collect technical skills
     document.querySelectorAll('#technical_skills div').forEach(div => {
         const inputs = div.querySelectorAll('input');
         const select = div.querySelector('select');
@@ -750,14 +750,12 @@ async function generateCV() {
         });
     });
 
-    // Recolectar idiomas
+    // Collect languages
     document.querySelectorAll('#languages div').forEach(div => {
         const selects = div.querySelectorAll('select');
         const certifications = [];
-    
-        // Verificar si hay suficientes elementos <select>
+
         if (selects.length >= 4) {
-            // Recolectar certificaciones de idiomas
             const certContainer = div.querySelector('#language_certifications');
             if (certContainer) {
                 certContainer.querySelectorAll('div').forEach(certDiv => {
@@ -772,7 +770,6 @@ async function generateCV() {
                 });
             }
     
-            // Agregar el idioma al array de habilidades
             data.skills.languages.push({
                 language: selects[0].value,
                 proficiency: {
@@ -785,7 +782,7 @@ async function generateCV() {
         }
     });
 
-    // Recolectar certificaciones
+    // Collect certifications
     document.querySelectorAll('#certification_fields div').forEach(div => {
         const inputs = div.querySelectorAll('input');
         data.certifications.push({
@@ -798,12 +795,11 @@ async function generateCV() {
         });
     });
 
-    // Recolectar eventos
+    // Collect events
     document.querySelectorAll('#event_fields div').forEach(div => {
         const inputs = div.querySelectorAll('input');
         const textarea = div.querySelector('textarea');
     
-        // Verificar que los elementos existan antes de acceder a sus valores
         if (inputs.length >= 4 && textarea) {
             data.events_participation.push({
                 name: inputs[0].value,
@@ -815,11 +811,10 @@ async function generateCV() {
         }
     });
     
-    // Recolectar publicaciones
+    // Collect publications
     document.querySelectorAll('#publication_fields div').forEach(div => {
         const inputs = div.querySelectorAll('input');
     
-        // Verificar que los elementos existan antes de acceder a sus valores
         if (inputs.length >= 7) {
             data.publications_research.push({
                 type: inputs[0].value,
@@ -833,11 +828,10 @@ async function generateCV() {
         }
     });
     
-    // Recolectar referencias
+    // Collect references
     document.querySelectorAll('#reference_fields div').forEach(div => {
         const inputs = div.querySelectorAll('input');
     
-        // Verificar que los elementos existan antes de acceder a sus valores
         if (inputs.length >= 6) {
             data.references.push({
                 name: inputs[0].value,
@@ -852,12 +846,11 @@ async function generateCV() {
         }
     });
     
-    // Recolectar premios/honores
+    // Collect awards/donors
     document.querySelectorAll('#awards div').forEach(div => {
         const inputs = div.querySelectorAll('input');
         const textarea = div.querySelector('textarea');
     
-        // Verificar que los elementos existan antes de acceder a sus valores
         if (inputs.length >= 3 && textarea) {
             data.additional_sections.awards_honors.push({
                 name: inputs[0].value,
@@ -868,12 +861,11 @@ async function generateCV() {
         }
     });
     
-    // Recolectar voluntariado
+    // Collect volunteering
     document.querySelectorAll('#volunteering div').forEach(div => {
         const inputs = div.querySelectorAll('input');
         const textarea = div.querySelector('textarea');
     
-        // Verificar que los elementos existan antes de acceder a sus valores
         if (inputs.length >= 4 && textarea) {
             data.additional_sections.volunteering.push({
                 role: inputs[0].value,
@@ -885,11 +877,10 @@ async function generateCV() {
         }
     });
     
-    // Recolectar afiliaciones profesionales
+    // Collect profesional afilliations
     document.querySelectorAll('#affiliations div').forEach(div => {
         const inputs = div.querySelectorAll('input');
     
-        // Verificar que los elementos existan antes de acceder a sus valores
         if (inputs.length >= 4) {
             data.additional_sections.professional_affiliations.push({
                 organization: inputs[0].value,
@@ -899,24 +890,21 @@ async function generateCV() {
             });
         }
     });
-    // Mostrar el JSON en la salida
+    // Show JSON
     document.getElementById('output').textContent = JSON.stringify(data, null, 2);
 
-    // Habilitar el enlace de descarga
+    // Download link
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     const downloadLink = document.getElementById('downloadLink');
     const downloadButton = document.getElementById('downloadButton');
 
-    // Asignar la URL y habilitar el botón de descarga
     downloadLink.href = url;
     downloadLink.download = 'cv.json';
     downloadButton.disabled = false; // Habilitar el botón
     downloadButton.style.opacity = 1; // Quitar la opacidad
 
-    // Agregar evento de clic para descargar el archivo
     downloadLink.onclick = () => {
-        // Liberar la URL del objeto después de la descarga
         setTimeout(() => URL.revokeObjectURL(url), 100);
     };
 }
