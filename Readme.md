@@ -1,5 +1,70 @@
 # CV to JSON
 
+## English version
+
+This project aims to create a standardized curriculum vitae (CV) format in JSON that can be used across multiple job platforms and industries. Inspired by international standards (such as those from UN-affiliated organizations, Europass, and LinkedIn), it seeks to define the necessary fields for a universal and easy-to-process CV.
+
+## Benefits of the JSON Format for CVs
+
+### For Job Applicants
+
+- **Time Savings**: Complete your CV once on a web page, convert it to a JSON file, and download it. Every time you apply for a job, upload your JSON file, and voilà! You save hours filling out forms and avoid fatigue, hassle, and potential frustration.
+- **Flexibility**: You can still use a PDF file to visually stand out to recruiters, but with the convenience of having an updatable JSON file.
+- **Easy Updates**: Create and update your JSON and PDF files whenever needed without losing information.
+- **Avoid Errors**: Prevent the loss of information that commonly occurs when uploading PDFs to platforms that do not correctly recognize fields.
+
+### For Organizations
+
+- **Improved Image**: They ensure a smooth experience for job applicants by providing all the benefits mentioned above.
+- **Talent Retention**: They avoid losing candidates by simplifying the information upload process, reducing dropout rates in application processes.
+- **Storage Optimization**: They store JSON files instead of PDFs, reducing storage costs and improving efficiency.
+- **Energy and Time Savings**: They avoid scanning PDFs or DOCX files, formats with a success rate of less than 50% in correctly assigning data.
+- **Easy Integration**: JSON files integrate seamlessly with database systems, APIs, and analysis tools.
+- **Efficient Classification**: The clear and organized structure of JSON facilitates the classification, search, and filtering of candidates.
+- **Scalability**: JSON is ideal for handling large volumes of data, crucial for platforms with thousands or millions of users.
+
+## How You Can Contribute
+
+You can contribute in several ways, even if you don’t have programming knowledge:
+
+- **Recommendations and Corrections**: Suggest improvements to the schema or structure of the JSON file.
+- **Development**: If you are a developer, you can contribute to making the JSON structure simpler or more useful.
+- **Universal Approach**: When making suggestions, think of a broad and universal field format that any platform can process.
+- **On GitHub**: Open an **issue** and write your suggestions, recommendations, and errors to be corrected.
+
+## Proposed JSON File Structure
+
+Open the `JSON_structured.txt` file to see how it is organized. There, you can view the suggested fields.
+
+## About the Converter
+
+The project includes a Python script to create a standardized CV in JSON format. This script is an example that can serve as a starting point for organizations to develop their own solutions.
+
+### Requirements
+
+- Python 3.x
+- Flask 3.1.0
+
+### How to Use the Script
+
+1. Clone the repository.
+2. Run the script to evaluate data conversion.
+3. Customize the script according to your organization's needs.
+
+### Contributions
+
+Your feedback and contributions are valuable. If you want to improve the project:
+
+- Open an **issue** to report bugs and suggest improvements, or
+- Submit a **pull request** with your contributions.
+
+Let’s work to add benefits instead of obstacles and make job searching easier instead of complicating it. This proposal is a win-win solution with low adaptation requirements, highly reasonable, and with an insignificant budget.
+
+Let’s adopt best practices for the benefit of everyone.
+
+
+## Español
+
 Este proyecto tiene como objetivo crear un formato estandarizado de currículum vitae (CV) en JSON que pueda ser utilizado en múltiples plataformas de empleo y sectores. Inspirado en estándares internacionales (como los de organizaciones afiliadas a la ONU, Europass y LinkedIn), busca definir los campos necesarios para un CV universal y fácil de procesar.
 
 ## Beneficios del formato JSON para CV
