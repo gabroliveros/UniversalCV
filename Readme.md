@@ -1,5 +1,4 @@
 # CV to JSON
-
 This project aims to create a standardized curriculum vitae (CV) format in JSON that can be used across multiple job platforms and industries. Inspired by international standards (such as those from UN-affiliated organizations, Europass, and LinkedIn), it seeks to define the necessary fields for a universal and easy-to-process CV.
 
 ## Benefits of the JSON Format for CVs
